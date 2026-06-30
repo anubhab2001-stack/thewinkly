@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Syne+Mono&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="commentTesting.js"></script>
 </head>
-<body>
+<body onload="loadComments('blog-post-2')">
     <header>
         <div class="web-logo">
             <img src="logo.png" alt="" class="web-logo-img">
@@ -125,8 +127,16 @@
             <p>*“RIVER SARASWATI: AN INTEGRATED STUDY BASED ON REMOTE SENSING & GIS TECHNIQUES WITH GROUND INFORMATION” published by ISRO.</p>
             <p>**https://karkanirka.org/2020/05/06/travel-of-kakka-and-vadai-from-indus-valley/</p>
         </div>
-        <div class="share-link" onclick="copyLink('https://anubhab2001-stack.github.io/thewinkly/blog1.html')">
+        <div class="share-link" onclick="copyLink('blog1.html')">
                     <img src="share.svg" alt="share the blog">
+        </div>
+        <div id="comment-box">
+            <h2>Comments</h2>
+            <div id="comments-container">Be the first to comment</div>
+            
+            <input type="text" id="username" placeholder="Your Name"><br>
+            <textarea id="commentText" placeholder="Write a comment..."></textarea><br>
+            <button onclick="submitComment('blog-post-2')" id="commentButton">Publish</button>
         </div>
     </main>
 
