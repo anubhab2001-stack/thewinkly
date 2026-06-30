@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Syne+Mono&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="commentTesting.js"></script>
 </head>
-<body>
+<body onload="loadComments('blog-post-1')">
     <header>
         <div class="web-logo">
             <img src="logo.png" alt="" class="web-logo-img">
@@ -48,7 +50,7 @@
                     <h3>Gist</h3>
                     <img src="blog0-2.png" alt="" style="width: 30%;">
                 </div>
-                <div class="share-link" onclick="copyLink('https://anubhab2001-stack.github.io/thewinkly/blog0.html')">
+                <div class="share-link" onclick="copyLink('blog0.html')">
                     <img src="share.svg" alt="share the blog">
                 </div>
                 <div class="recent-section">
@@ -58,6 +60,14 @@
                     <a href="#" class="button">See All Blogs</a>
                  </div>
             </div>
+        </div>
+        <div id="comment-box">
+            <h2>Comments</h2>
+            <div id="comments-container">Be the first to comment</div>
+            
+            <input type="text" id="username" placeholder="Your Name"><br>
+            <textarea id="commentText" placeholder="Write a comment..."></textarea><br>
+            <button onclick="submitComment('blog-post-1')" id="commentButton">Publish</button>
         </div>
     </main>
     <footer>The Winkly | &copy;2026</footer>
