@@ -237,6 +237,9 @@ footer{
     .navbar-list{
         font-size: 16px;
     }
+    .main-section{
+        margin: 5px;
+    }
     .feature-section{
         flex-wrap: wrap;
     }
