@@ -13,17 +13,18 @@
 <body>
     <header>
         <div class="web-logo">
-            <img src="logo.png" alt="" class="web-logo-img">
+            <!-- <img src="logo.png" alt="" class="web-logo-img"> -->
             <h1 class="web-logo-name">The Winkly</h1>
         </div>
         <div class="navbar">
             <ul class="navbar-list">
-                <li><a href="index.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" style="background-color: yellow;
+    color: blue;">Blogs</a></li>
+                <li><a href="archive.html">Archive</a></li>
             </ul>
-            <div class="navbar-noti-button" onclick="window.location.href='https://forms.gle/RrzjKKYhHasLZr3S7'"><img src="noti.svg" alt="Get Notification"></div>
-            <div class="dark-white-button">
-                <img src="white.svg" alt="dark-white mode" onclick="darkWhite()">
+            <div class="navbar-utility">
+                <img src="noti.svg" alt="Get Notification" class="navbar-noti-button" onclick="window.location.href='https://forms.gle/RrzjKKYhHasLZr3S7'">
+                <img src="white.svg" alt="dark-white mode" onclick="darkWhite()" class="dark-white-button">
             </div>
         </div>
     </header>
@@ -33,20 +34,13 @@
                 <img src="blog1-1.png" alt="blog0-1">
                 <div class="feature-article">
                     <h1 class="title">Indus Valley Civilisation: Herald of A New Era in Ancient Indian History</h1>
-                    <h2 class="author">Anubhab Mukherjee | 22 June 2026 | 20 min read</h2>
+                    <h2 class="author">22 June 2026</h2>
                     <h3 class="tags">#Indian History</h3>
                     <p class="description">In 1829, a deserter from the East India Company’s army, Charles Masson, was travelling through the bleak lands of Punjab state. His job was to accrue intelligence and gather historical artifacts throughout his journey. Masson was greatly fascinated by the campaigns of Alexander the Great and most of the places he visited during this adventure were from the stories of Alexander's chroniclers. Harappa, once a metropolis of Indus Valley Civilisation on the banks of the river Ravi, was one of those places. In the book, Narrative of Various Journeys in Baluchistan, Afghanistan, and the Punjab, Masson mentioned the richness of this place for its antique artifacts, mostly buried in the soil, but erroneously identified the site as coeval with Alexander’s campaign. It took another century to comprehend the importance of Harappa, when an Indian archeologist, Dayaram Sahni, initiated excavation of two mounds at that place in 1921.<p>
                     <p class="description">The discovery of Indus Valley Civilisation, also known as Harappan Civilisation, was a mere serendipity. No one imagined that a pivotal chapter of Indian history lay dormant beneath immense layers of soil for millennia. This gigantic archaic...
                     </p>
                     <a href="blog1.html" class="button" id="read-article">Read More</a>
                 </div>
-            </div>
-            <div class="recent-section">
-                <h1 style="text-decoration: underline;">Recent Blogs</h1>
-                <h2>><a href="blog1.html">Indus Valley Civilisation: Herald of A New Era in Ancient Indian History</a></h2>
-                <h2>><a href="blog0.html">The Unpredictable Weather: Journey From Determinism to Chaos</a></h2>
-                <br/><br/>
-                <a href="#" class="button">See All Blogs</a>
             </div>
         </div>
     </main>
