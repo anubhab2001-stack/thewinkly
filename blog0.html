@@ -15,17 +15,17 @@
 <body onload="loadComments('blog-post-1')">
     <header>
         <div class="web-logo">
-            <img src="logo.png" alt="" class="web-logo-img">
+            <!-- <img src="logo.png" alt="" class="web-logo-img"> -->
             <h1 class="web-logo-name">The Winkly</h1>
         </div>
         <div class="navbar">
             <ul class="navbar-list">
                 <li><a href="index.html">Blogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="archive.html">Archive</a></li>
             </ul>
-            <div class="navbar-noti-button" onclick="window.location.href='https://forms.gle/RrzjKKYhHasLZr3S7'"><img src="noti.svg" alt="Get Notification"></div>
-            <div class="dark-white-button">
-                <img src="white.svg" alt="dark-white mode" onclick="darkWhite()">
+            <div class="navbar-utility">
+                <img src="noti.svg" alt="Get Notification" class="navbar-noti-button" onclick="window.location.href='https://forms.gle/RrzjKKYhHasLZr3S7'">
+                <img src="white.svg" alt="dark-white mode" onclick="darkWhite()" class="dark-white-button">
             </div>
         </div>
     </header>
@@ -45,21 +45,9 @@
             <p class="blog-normal-para">Poincare’s notion for the chaotic systems lay dormant for half a century as there were no directly observable real life incidents that caught the eyes of scientists. But serendipitously a meteorologist in MIT rediscovered the plant of Poincare that linked chaos with weather. In the early 1960s, a few Hurricanes devastated the USA and all the blame went to the Weather Department and meteorologists. Edward Lorenz was one of those meteorologists in MIT, who was working with some computer models to simulate the weather patterns. Basically he was solving a bunch of differential equations with some real weather parameters and initial conditions gathered by weather balloons and satellites. One day, when he was busy with such models, he unexpectedly discovered chaos. Actually working with real weather data, during rerun of a model, he rounded the values of initial conditions. That means instead of putting the value 0.506127, he put 0.506 to save time. In Newtonian mechanics this minute change doesn’t affect the solution. But when Lorenz rerun the model with 0.506 value in the computer, it gave an utterly different output from what he got for the initial value of 0.506127. In the beginning he assumed that the error was coming because of a faulty computer system. But when he observed the outputs conscientiously, he found an astonishing result. At first, the difference between the outputs (divergence of the solutions or trajectories for two slightly different initial values, 0.506127 and 0.506) were subtle, but it grew exponentially into a large error within days. It stirred up Poincare's decades-old theory. From the outputs Lorenz was convinced that he was dealing with a chaotic system and felt the need of measuring initial conditions more precisely. So, for every minutely different initial values (0.12786, 0.12785, 0.12781 and so on) the weather model will show different weather results in the long run. This weather phenomenon was later named as ‘Butterfly Effect’, inspired from the title of a presentation given by Lorenz in MIT in the year 1972, “Predictability: Does the Flap of a Butterfly's Wings in Brazil Set Off a Tornado in Texas?”. Obviously this is a metaphor, but he deliberately used the title to apprise the point that how a little change in the past can make the future completely dicey. </p>
             <p class="blog-normal-para">Lorenz’s Butterfly Effect worked as an adjunct to connect Poincare’s mathematical theory with real life chaotic phenomenon. It urges the meteorologists to gather and use weather data more precisely. Nowadays we are taking help from the chain of satellites, weather balloons to amass more accurate data. We use multiple weather models as an ensemble to get a more precise weather forecast. But we have limits on how accurately we can measure. So, errors will be there no matter how hard we try to make our weather systems accurate. This is the beauty of nature, a universe that can be defined with simple, deterministic mathematical models, can still be unpredictable.  </p>
             <p class="blog-normal-para">So, next time when you face such deceitful weather reports, don’t blame the meteorologists. Rather acknowledge the ultimate reality that instills the inherent ambiguity in nature that creates adversity in predicting the future. </p>
-            <div class="blog-footer">
-                <div class="gist">
-                    <h3>Gist</h3>
-                    <img src="blog0-2.png" alt="" style="width: 30%;">
-                </div>
-                <div class="share-link" onclick="copyLink('blog0.html')">
-                    <img src="share.svg" alt="share the blog">
-                </div>
-                <div class="recent-section">
-                    <h1 style="text-decoration: underline;">Recent Blogs</h1>
-                    <h2>><a href="blog1.html">Indus Valley Civilisation: Herald of A New Era in Ancient Indian History</a></h2>
-                    <br/><br/>
-                    <a href="#" class="button">See All Blogs</a>
-                 </div>
-            </div>
+        </div>
+        <div class="share-link" onclick="copyLink('blog0.html')">
+            <img src="share.svg" alt="share the blog">
         </div>
         <div id="comment-box">
             <h2>Comments</h2>
