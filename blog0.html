@@ -43,6 +43,77 @@
             <p class="blog-normal-para">The problem was not actually “unsolvable” in the physical sense, rather it was “unsolvable” for the scarcity of mathematical knowledge or analytical methods. In those days, physicists had been using analytical techniques to solve differential equations for the physical systems. But those techniques or methods were not capable enough to deal with the “three body problem”. They needed new ideas, new mathematical methods. Actually the worm in the apple was not the physical laws, it was the inherent property of the system that made the problem seemingly “unsolvable”. The system itself is deterministic, but predicting the long term future with precise accuracy is not possible. Why? The answer was given by Henri Poincare in his memoir, entitled “On the problem of the three bodies and the equations of dynamics”, that won the King Oscar prize in the year 1889. He approached the problem differently. Rather than solving the problem with conventional techniques, he asked the question whether the system is itself stable or not. In his memoir he showed that our solar system is not as stable as we think. The dependency of the system on initial conditions was highly sensitive and a subtle change in the condition can cause a drastic effect on the future state of the system. That means a single long term solution for the future state is not possible, though the system is deterministic. This idea directly contradicts Newton's predictable universe, where a minute change in initial state only affects the future minutely. Poincare’s approach planted the seed of a new branch in science, named “Chaos”. Chaos means an utter confusion or disorder and chaotic systems are highly sensitive to the initial conditions. It means our Solar system, or the three body problem is deterministic but the system itself is chaotic, that makes its long term future unpredictable. Now these chaotic systems are gonna play a crucial role in understanding the weather.</p>
             <h3 class="blog-subhead">Lorenz’s Butterfly Effect and The Unpredictable Weather</h3>
             <p class="blog-normal-para">Poincare’s notion for the chaotic systems lay dormant for half a century as there were no directly observable real life incidents that caught the eyes of scientists. But serendipitously a meteorologist in MIT rediscovered the plant of Poincare that linked chaos with weather. In the early 1960s, a few Hurricanes devastated the USA and all the blame went to the Weather Department and meteorologists. Edward Lorenz was one of those meteorologists in MIT, who was working with some computer models to simulate the weather patterns. Basically he was solving a bunch of differential equations with some real weather parameters and initial conditions gathered by weather balloons and satellites. One day, when he was busy with such models, he unexpectedly discovered chaos. Actually working with real weather data, during rerun of a model, he rounded the values of initial conditions. That means instead of putting the value 0.506127, he put 0.506 to save time. In Newtonian mechanics this minute change doesn’t affect the solution. But when Lorenz rerun the model with 0.506 value in the computer, it gave an utterly different output from what he got for the initial value of 0.506127. In the beginning he assumed that the error was coming because of a faulty computer system. But when he observed the outputs conscientiously, he found an astonishing result. At first, the difference between the outputs (divergence of the solutions or trajectories for two slightly different initial values, 0.506127 and 0.506) were subtle, but it grew exponentially into a large error within days. It stirred up Poincare's decades-old theory. From the outputs Lorenz was convinced that he was dealing with a chaotic system and felt the need of measuring initial conditions more precisely. So, for every minutely different initial values (0.12786, 0.12785, 0.12781 and so on) the weather model will show different weather results in the long run. This weather phenomenon was later named as ‘Butterfly Effect’, inspired from the title of a presentation given by Lorenz in MIT in the year 1972, “Predictability: Does the Flap of a Butterfly's Wings in Brazil Set Off a Tornado in Texas?”. Obviously this is a metaphor, but he deliberately used the title to apprise the point that how a little change in the past can make the future completely dicey. </p>
+            <p class="blog-normal-para">Watch how a 0.000127 difference in the start position causes total chaos in far future. Solutions for the two diffrent initial positions gradually start to differ from each other for a large time.</p>
+            <canvas id="lorenzCanvas" width="800" height="600"></canvas>
+
+            <script>
+                const canvas = document.getElementById('lorenzCanvas');
+                const ctx = canvas.getContext('2d');
+
+                // Lorenz System Parameters
+                const sigma = 10;
+                const rho = 28;
+                const beta = 8 / 3;
+                const dt = 0.005; // Time step (smaller = smoother but slower)
+
+                // Point 1 (Blue)
+                let x1 = 0.506;
+                let y1 = 0;
+                let z1 = 0;
+
+                // Point 2 (Cyan) - Start with a tiny 0.001 difference
+                let x2 = 0.506127; 
+                let y2 = 0;
+                let z2 = 0;
+
+                // Scale and positioning for the 2D canvas
+                const scale = 12;
+                const offsetX = canvas.width / 2;
+                const offsetY = canvas.height - 50;
+
+                function updatePosition(x, y, z) {
+                    const dx = sigma * (y - x) * dt;
+                    const dy = (x * (rho - z) - y) * dt;
+                    const dz = (x * y - beta * z) * dt;
+                    return { x: x + dx, y: y + dy, z: z + dz };
+                }
+
+                function draw() {
+                    // Darken the background slightly each frame to create a trailing effect
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.03)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    // Calculate next positions
+                    const next1 = updatePosition(x1, y1, z1);
+                    const next2 = updatePosition(x2, y2, z2);
+
+                    // Draw Point 1 (Blue)
+                    ctx.beginPath();
+                    ctx.moveTo(x1 * scale + offsetX, offsetY - z1 * scale);
+                    ctx.lineTo(next1.x * scale + offsetX, offsetY - next1.z * scale);
+                    ctx.strokeStyle = 'rgba(0, 100, 255, 0.9)';
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+
+                    // Draw Point 2 (Cyan)
+                    ctx.beginPath();
+                    ctx.moveTo(x2 * scale + offsetX, offsetY - z2 * scale);
+                    ctx.lineTo(next2.x * scale + offsetX, offsetY - next2.z * scale);
+                    ctx.strokeStyle = 'rgba(0, 255, 255, 0.9)';
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+
+                    // Update current variables
+                    x1 = next1.x; y1 = next1.y; z1 = next1.z;
+                    x2 = next2.x; y2 = next2.y; z2 = next2.z;
+
+                    // Loop the animation
+                    requestAnimationFrame(draw);
+                }
+
+                // Start drawing
+                draw();
+            </script>
             <p class="blog-normal-para">Lorenz’s Butterfly Effect worked as an adjunct to connect Poincare’s mathematical theory with real life chaotic phenomenon. It urges the meteorologists to gather and use weather data more precisely. Nowadays we are taking help from the chain of satellites, weather balloons to amass more accurate data. We use multiple weather models as an ensemble to get a more precise weather forecast. But we have limits on how accurately we can measure. So, errors will be there no matter how hard we try to make our weather systems accurate. This is the beauty of nature, a universe that can be defined with simple, deterministic mathematical models, can still be unpredictable.  </p>
             <p class="blog-normal-para">So, next time when you face such deceitful weather reports, don’t blame the meteorologists. Rather acknowledge the ultimate reality that instills the inherent ambiguity in nature that creates adversity in predicting the future. </p>
         </div>
