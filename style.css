@@ -329,7 +329,7 @@ footer{
     transition: all 1s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     main{
         margin: 0% 2%;
     }
