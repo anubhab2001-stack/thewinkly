@@ -1,10 +1,40 @@
+/*universal*/
 *{
-    margin: 0px; padding: 0;
+    margin: 0; padding: 0;
+}
+h1{
+    font-size: 38px;
+}
+h2{
+    color: rgb(128, 127, 127);
+}
+h3{
+    font-size: 16px;
+    color: rgb(167, 167, 167);
 }
 p{
+    font-size: 18px;
     line-height: 1.5rem;
+    margin: 20px 0px;
+}
+rc{
+    color:rgb(255, 102, 0);
+}
+bc{
+    color: rgb(119, 151, 187);
+}
+yc{
+    color: rgb(186, 186, 39);
+}
+gc{
+    color: rgb(8, 146, 8);
+}
+clink{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
+/*general body*/
 body{
     color: black;
     background-color: white;
@@ -13,381 +43,156 @@ body{
     font-style: normal;
     transition: all 2s;
 }
-
-.web-logo-img{
-    width: 120px; height: 120px;
-    border: 2px solid;
-    border-radius: 80%;
-}
-
 header{
-    padding: 16px 0px;
-    background-image: linear-gradient(120deg, red, red);
-    transition: all 1s;
-}
-.web-logo{
-    margin-left: 20%;
-    display: flex;
-    justify-content: left;
+    background: linear-gradient(red, red);
     color: white;
-    font-size: 32px;
 }
-.web-logo-name{
-    font-family: "Monoton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3% 25% 1% 25%;
 }
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 12px; padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-.navbar-list{
+.logo{
+    cursor: pointer;
+}
+.pages{
     display: flex;
-    gap: 50px;
+    justify-content: space-around;
+    gap: 30px;
     align-items: center;
-    font-size: 20px;
 }
-.navbar-list li{
+.pages li{
     list-style: none;
-    transition: all 1s;
-}
-.navbar-list li:active{
-    transform: scale(0.9);
-}
-.navbar-list li a{
-    padding: 8px;
-    border-radius: 10px;
-    text-decoration: none;
-    color:white;
-    transition: all 1s;
-}
-.navbar-list li a:hover{
-    background-color: yellow;
-    color: blue;
-    transition: all 1s;
-}
-.navbar-utility{
-    display: flex;
-    gap: 15%;
-    justify-content: space-around;
-    align-items: center;
-}
-.navbar-noti-button{
-    padding: 8px;
-    border-radius: 10px;
-    border: 4px solid blue;
-    background-color: yellow;
-    color: red;
     cursor: pointer;
+    color: rgb(213, 211, 211);
 }
-.navbar-noti-button:hover{
-    background-color: lightcyan;
-}
-.navbar-noti-button:active{
-    transform: scale(0.9);
-}
-main{
-    margin: 0% 10%;
-}
-
-.feature-section img{
-    width: 80%;
-}
-.main-section{
-    display: flex;
-    margin: 30px 0px;
-    justify-content: center;
-}
-.archive-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 30px 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.archive-section h1{
-    font-size: 36px;
-    margin-bottom: 5%;
-}
-.archive-section h2{
-    font-size: 24px;
-    margin-bottom: 2%;
-}
-.archive-section h3{
-    font-size: 16px;
-    margin-bottom: 2%;
-    color: gray;
-}
-.archive-section h3 a{
-    font-size: 24px;
-    text-decoration: none;
-    color: black;
-}
-.archive-section h3 a:hover{
-    color: rgb(104, 103, 103);
-}
-.feature-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 20px; width: 80%;
-}
-.title{
-    margin: 12px 0px;
-}
-.author{
-    font-size: 20px;
-    margin: 8px 0px;
-    color: rgb(159, 159, 159);
-}
-.tags{
-    font-size: 16px;
-    border: 2px solid blue;
-    background-color: yellow;
-    color: red;
-    display: inline;
-    padding: 4px; margin: 12px 0px;
-    border-radius: 10px;
-}
-.description{
-    margin: 12px 0px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-}
-.button{
-    cursor: pointer;
-    color: red;
-    font-size: 20px; font-weight: bold;
-}
-
-.blog-section{
-    margin: 5% 10%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
-}
-.blog-section ul li{
-    margin: 2%;
-}
-.blog-title{
-    font-size: 40px;
-    margin-bottom: 12px; padding: 12px;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(blog1-1.png);
-    background-position: center;
+.pages li:hover{
     color: white;
-    border-radius: 10px;
 }
-.blog-author{
-    margin-bottom: 16px;
-    border-bottom: 2px solid black;
-}
-.blog-init-para{
-    text-align: justify;
-    margin: 16px;
-}
-.blog-init-para::first-letter{
-    font-size: 40px;
-    color: blue;
-}
-.blog-normal-para{
-    text-indent: 2rem;
-    text-align: justify;
-    margin: 16px;
-}
-.blog-subhead{
-    color: blue;
+.utilities{
     display: flex;
-    gap: 5px;
+    justify-content: space-around; gap: 10px;
     align-items: center;
 }
-.blog-footer{
-    display: flex;
-}
-.blog-special-font{
-    padding: 2%; margin: 1%;
-    font-style: italic;
-    background: linear-gradient(90deg, rgb(245, 201, 58, 0.5), rgb(133, 250, 104, 0.5));
-    border-left: 4px solid brown;
-}
-figcaption{
-    font-size: 12px;
-}
-figure img{
+.utilities img{
     cursor: pointer;
+    padding: 4px;
 }
-.share-link{
-    position:fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-self: right;
-    width: 40px;
-    height: 50px;
-    cursor: pointer; margin: 10px;
-    padding: 12px;
-    background: linear-gradient(32deg, yellow, rgb(64, 128, 0));
+#noti{
+    background-color: white;
     border-radius: 80px;
     transition: all 1s;
 }
-.share-link:hover{
-    background: linear-gradient(32deg, red, rgb(64, 128, 0));
-    transform: scale(1.2) translateY(-5px) translateX(-5px);
+#noti:hover{
+    background-color: yellow;
     transition: all 1s;
 }
-it{
-    font-style: italic;
-    font-weight: bold;
-}
-rc{
-    color: crimson;
-}
-pc{
-    color: magenta;
-}
-yc{
-    color: gold;
-}
-gc{
-    color: lightgreen;
-}
-oc{
-    color: orange;
-}
-.dark-white-button{
-    padding: 8%;
-    cursor: pointer;
+#dark-white{
     transition: all 1s;
 }
-.dark-white-button:hover{
+#dark-white:hover{
     background-color: black;
-    border-radius: 20px;
+    border-radius: 80px;
+    transition: all 1s;
 }
-#comment-box{
-    margin: 5% 10%; padding: 5%;
+/* here is the main section */
+main{
+    margin: 3% 25%;
+}
+
+/*blogs*/
+#blog-title{
+    margin: 20px 0px 10px 0px;
+}
+#blog-list{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(20deg, red, yellow);
+    align-items: center;
+    font-size: 18px;
+    margin: 15px;
+}
+.special-box{
+    font-style: italic;
+    border-left: 2px solid red;
+    background-color: rgba(128, 128, 128, 0.373);
+    padding: 10px;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figure img{
+    width: 100%;
+}
+figcaption{
+    font-size: 14px;
+    margin: 5px 0px;
+}
+.further-reads{
+    margin-top: 40px; padding: 10px;
+    background-color: rgba(104, 104, 251, 0.606);
     border-radius: 20px;
 }
-#comments-container{
-    margin: 5% 0%;
-    background-color: rgba(128, 128, 128, 0.273);
-    padding: 5%;
+
+/*archive page*/
+.archive-unit{
+    margin: 40px 0px;
 }
-#username{
-    min-width: 60%;
-    font-size: 20px;
-    padding: 5px;
-    border: none;
-    border-bottom: 2px solid black;
-    background: transparent;
-    outline: none;
+.archive-unit li{
+    list-style: none;
 }
-#commentText{
-    height: 80px;
-    min-width: 80%;
-    font-size: 20px;
-    padding: 5px;
-    border: none;
-    border: 2px solid black;
-    border-radius: 20px;
-    background: transparent;
-    outline: none;
+.blog-unit li{
+    margin: 20px 0px;
 }
-#commentButton{
-    width: 100px;
-    font-size: 16px;
-    padding: 8px;
-    background: blue;
-    color: white;
-    border: none;
-    border-radius: 10px;
+.blogs{
+    color: rgb(193, 192, 192);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+bl{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(119, 119, 119);
     cursor: pointer;
 }
-#commentButton:active{
-    transform: scale(0.9);
-}
-canvas{
-    display: flex;
-    justify-content: center;
-    height: 50%; width: 100%;
-    background-color: #000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+bl:hover{
+    color: rgb(181, 179, 179);
 }
 
+
+share{
+    color: rgb(193, 192, 192);
+    text-decoration: underline;
+    cursor: pointer;
+}
 footer{
-    border-top: 2px solid;
-    margin-top: 12px; padding: 12px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(120deg, rgb(255, 85, 0), rgb(182, 127, 255));
-    color: white;
-    transition: all 1s;
+    font-size: 14px;
+    padding: 30px 0px 20px 0px;
+    color: rgb(213, 211, 211);
 }
 
-@media (max-width: 900px) {
+
+
+/*flexible window*/
+@media (max-width:900px) {
+    nav{
+        padding: 5% 6% 2% 6%;
+    }
     main{
-        margin: 0% 2%;
-    }
-    .blog-section{
-        margin: 5% 1%;
-    }
-    .web-logo{
-        font-size: 24px;
-    }
-    .main-section{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .feature-section{
-        flex-wrap: wrap;
-    }
-    .feature-section img{
-        width: 500px;
-    }
-}
-@media (max-width: 400px) {
-    
-    .web-logo{
-        font-size: 18px;
-    }
-    .web-logo-img{
-        width: 80px;
-    }
-    .navbar-list{
-        font-size: 16px;
-    }
-    .feature-section{
-        flex-wrap: wrap;
-    }
-    .feature-section img{
-        width: 100%;
-    }
-    .title{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .author{
-        font-size: 18px;
-    }
-    .description{
-        font-size: 16px;
-    }
-    .main-section{
-        flex-wrap: wrap;
-    }
-    .blog-title{
-        font-size: 24px;
-    }
-    .blog-author{
-        font-size: 20px;
-    }
-    .blog-section p{
-        font-size: 18px;
-        text-align: left;
+        margin: 4% 6%;
     }
 }
