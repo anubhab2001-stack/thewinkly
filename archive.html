@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Winkly</title>
+    <title>The Winkly | Archive</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,30 +12,34 @@
 </head>
 <body>
     <header>
-        <div class="web-logo">
-            <!-- <img src="logo.png" alt="" class="web-logo-img"> -->
-            <h1 class="web-logo-name">The Winkly</h1>
-        </div>
-        <div class="navbar">
-            <ul class="navbar-list">
-                <li><a href="index.html">Blogs</a></li>
-                <li><a href="archive.html" style="background-color: yellow;
-    color: blue;">Archive</a></li>
-            </ul>
-            <div class="navbar-utility">
-                <img src="noti.svg" alt="Get Notification" class="navbar-noti-button" onclick="window.location.href='https://forms.gle/RrzjKKYhHasLZr3S7'">
-                <img src="white.svg" alt="dark-white mode" onclick="darkWhite()" class="dark-white-button">
+        <nav>
+            <div class="logo"><h1>The Winkly</h1></div>
+            <div class="navbar">
+                <ul class="pages">
+                    <li onclick="window.location.href='index.html'">Blog</li>
+                    <li onclick="window.location.href='archive.html'">Archive</li>
+                </ul>
+                <div class="utilities">
+                    <img src="noti.svg" alt="Subscribe" id="noti" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSf-FxxfRynsSlaCqUejWubOhIvOZVjGxUOXc9jq8mhqQ_Q3cA/viewform?usp=header'">
+                    <img src="dark.svg" alt="Dark-White Mode" id="dark-white" onclick="darkWhite()">
+                    <img src="mail.svg" alt="Mail to me" id="dark-white" onclick="window.location.href = 'mailto:anubhabmukherjee2001@icloud.com'">
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
     <main>
-        <div class="archive-section">
-            <h1>Archive</h1>
-            <h2>2026</h2>
-            <h3>June 22 <a href="blog1.html">Indus Valley Civilisation</a></h3>
-            <h3>June 02 <a href="blog0.html">The Unpredictable Weather</a></h3>
-        </div>
+        <h1>Archive</h1>
+        <ul class="archive-unit">
+            <li class="years"><h2>2026</h2></li>
+            <ul class="blog-unit">
+                <li class="blogs">June 22 <bl onclick="window.location.href='index.html'">Indus Valley Civilisation</bl></li>
+                <li class="blogs">June 02 <bl onclick="window.location.href='blog0.html'">The Unpredictable Weather</bl></li>
+            </ul>
+        </ul>
     </main>
-    <footer>The Winkly | &copy;2026</footer>
+    <footer>
+        <div class="share-blog">If you like these blogs, please <share onclick="copyLink('#')">share</share> it.</div>
+        <div class="copyright">Copyright &copy; 2026 The Winkly</div>
+    </footer>
 </body>
 </html>
