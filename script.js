@@ -14,7 +14,7 @@ function darkWhite(){
     dwValue = 1;
     document.body.style.color = "white";
     document.body.style.backgroundColor = "black";
-    header.style.background = "linear-gradient(120deg, lightgreen, black)";
+    header.style.background = "linear-gradient(120deg, red, black)";
     dwButton.src = "white.svg";
   }
   else if (dwValue == 1){
