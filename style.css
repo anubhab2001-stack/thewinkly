@@ -36,15 +36,17 @@ clink{
 
 /*general body*/
 body{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 400;
     font-style: normal;
     transition: all 2s;
 }
 header{
-    background: linear-gradient(red, red);
+    background: linear-gradient(rgba(25, 25, 112, 0.2), rgba(0, 0, 0, 0.5)), url('Ross.jpeg');
+    background-position: center;
+    background-size: cover;
     color: white;
 }
 nav{
@@ -95,6 +97,14 @@ nav{
     background-color: yellow;
     transition: all 1s;
 }
+#profile{
+    transition: all 1s;
+}
+#profile:hover{
+    background-color: black;
+    border-radius: 80px;
+    transition: all 1s;
+}
 #dark-white{
     transition: all 1s;
 }
@@ -139,8 +149,8 @@ figcaption{
 }
 .further-reads{
     margin-top: 40px; padding: 10px;
-    background-color: rgba(104, 104, 251, 0.606);
-    border-radius: 20px;
+    background-color: midnightblue;
+    color: white;
 }
 
 /*archive page*/
@@ -170,6 +180,29 @@ bl:hover{
     color: rgb(181, 179, 179);
 }
 
+/*gallery*/
+.prof-intro{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+#prof-image{
+    width: 150px; height: 150px;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+.gallery{
+    margin-top: 8%; margin-bottom: 8%;
+    display: flex;
+    gap: 10%;
+    justify-content: space-around;
+    align-items: center;
+}
+.gallery-image{
+    width: 80%;
+    border: 1px solid white;
+}
+
 
 share{
     color: rgb(193, 192, 192);
@@ -194,5 +227,22 @@ footer{
     }
     main{
         margin: 4% 6%;
+    }
+}
+@media (max-width:500px) {
+    .prof-intro{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    #prof-image{
+        margin-bottom: 16px;
+    }
+    .gallery{
+        flex-wrap: wrap;
+    }
+    .pages{
+        font-size: 14px;
+        gap: 10px;
     }
 }
