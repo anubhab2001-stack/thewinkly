@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Winkly | Articles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Syne+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='index.html'"><h1>The Winkly</h1></div>
+            <div class="navbar">
+                <ul class="pages">
+                    <li onclick="window.location.href='index.html'">Blog</li>
+                    <li onclick="window.location.href='archive.html'">Archive</li>
+                    <li onclick="window.location.href='articles.html'">Articles</li>
+                </ul>
+                <div class="utilities">
+                    <img src="noti.svg" alt="Subscribe" id="noti" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSf-FxxfRynsSlaCqUejWubOhIvOZVjGxUOXc9jq8mhqQ_Q3cA/viewform?usp=header'">
+                    <img src="white.svg" alt="Dark-White Mode" id="dark-white" onclick="darkWhite()">
+                    <img src="profile.svg" alt="Dark-White Mode" id="profile" onclick="window.location.href='profile.html'">
+                    <img src="mail.svg" alt="Mail to me" id="dark-white" onclick="window.location.href = 'mailto:anubhabmukherjee2001@icloud.com'">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <ul class="archive-unit">
+            <li class="years"><h2>2026</h2></li>
+            <ul class="blogs-units">
+                <li class="blogs">Aug 26 <bl onclick="window.location.href='article1.html'">The Problem with VB-G RAM G Act, 2025</bl></li>
+            </ul>
+        </ul>
+    </main>
+    <footer>
+        <div class="share-blog">If you like this blog, please <share onclick="copyLink('#')">share</share> it.</div>
+        <div class="copyright">Copyright &copy; 2026 The Winkly</div>
+    </footer>
+</body>
+</html>

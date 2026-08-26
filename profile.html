@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Winkly | Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Syne+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='index.html'"><h1>The Winkly</h1></div>
+            <div class="navbar">
+                <ul class="pages">
+                    <li onclick="window.location.href='index.html'">Blog</li>
+                    <li onclick="window.location.href='archive.html'">Archive</li>
+                    <li onclick="window.location.href='articles.html'">Articles</li>
+                </ul>
+                <div class="utilities">
+                    <img src="noti.svg" alt="Subscribe" id="noti" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSf-FxxfRynsSlaCqUejWubOhIvOZVjGxUOXc9jq8mhqQ_Q3cA/viewform?usp=header'">
+                    <img src="white.svg" alt="Dark-White Mode" id="dark-white" onclick="darkWhite()">
+                    <img src="profile.svg" alt="Dark-White Mode" id="profile" onclick="window.location.href='profile.html'">
+                    <img src="mail.svg" alt="Mail to me" id="dark-white" onclick="window.location.href = 'mailto:anubhabmukherjee2001@icloud.com'">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="prof-intro">
+            <img src="Photos-1-001/my_dp.png" alt="Profile Image" id="prof-image">
+            <div class="prof-info">
+                <h2>Anubhab Mukherjee</h2>
+                <p>Hi, I am a postgraduate in Astrophysics. This is where I disseminate knowledge and reflect on subtle moments of my life.</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <img src="Photos-1-001/IM2.jpg" alt="" class="gallery-image" style="box-shadow: 20px 20px red;">
+        </div>
+        <div class="gallery">
+            <img src="Photos-1-001/IM29.jpg" alt="" class="gallery-image" style="box-shadow: 20px 20px greenyellow;">
+        </div>
+        <div class="gallery">
+            <img src="Photos-1-001/IM5.jpg" alt="" class="gallery-image" style="box-shadow: 20px 20px gold;">
+        </div>
+        <div class="gallery">
+            <img src="Photos-1-001/IM10.jpg" alt="" class="gallery-image" style="box-shadow: 20px 20px blue;">
+        </div>
+        <div class="gallery">
+            <img src="Photos-1-001/IM14.jpeg" alt="" class="gallery-image" style="box-shadow: 20px 20px violet;">
+        </div>
+        <div class="gallery">
+            <img src="Photos-1-001/IM13.jpg" alt="" class="gallery-image" style="box-shadow: 20px 20px skyblue;">
+        </div>
+    </main>
+    <footer>
+        <div class="share-blog">If you like this blog, please <share onclick="copyLink('#')">share</share> it.</div>
+        <div class="copyright">Copyright &copy; 2026 The Winkly</div>
+    </footer>
+</body>
+</html>
